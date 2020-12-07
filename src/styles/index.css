@@ -1,0 +1,269 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: Ubuntu, sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  background: #bdc3c7;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 80%;
+  min-height: 830px;
+  box-sizing: border-box;
+  padding: 20px;
+  background: #ecf0f1;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+}
+
+.app-header,
+.app-content,
+.search-form,
+.search-result,
+.app-footer {
+  width: 100%;
+  box-sizing: border-box;
+  align-self: stretch;
+}
+
+.search-result {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-areas: "head head head head head"
+    ". . . . .";
+  margin: 20px 0;
+}
+.search-result > .name {}
+.search-result > .cpf-cnpj {}
+.search-result > .uf {}
+.search-result > .city {}
+.search-result > .phone {}
+
+.input-text, .input-date, .radio-group, .select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.button {
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #bdc3c7;
+  border: none;
+  color: #2c3e50;
+  text-transform: uppercase;
+  border: 2px transparent;
+  border-bottom: 2px solid #2c3e50;
+}
+
+.button:hover {
+  cursor: pointer;
+  transition: background-color linear 300ms;
+}
+
+.button.md {
+  font-size: 1em;
+  padding: 6px;
+}
+
+.button.xlg {
+  font-size: 1.4em;
+}
+
+.button.full-width {
+  width: 100%;
+}
+
+.button.info {
+  color: #ecf0f1;
+  background: #2980b9;
+  border-bottom-color: #2980b9;
+}
+.button.info:hover {
+  background: #3498db;
+}
+
+.button.success {
+  color: #ecf0f1;
+  background: #27ae60;
+  border-bottom: 2px solid #27ae60;
+}
+.button.success:hover {
+  background: #2ecc71;
+}
+
+.radio-item {
+  line-height: 1em;
+  padding: 10px 0;
+  display: inline;
+}
+
+.radio-item + .radio-item {
+  margin-left: 20px;
+}
+
+.radio-button, .radio-label { }
+
+.radio-button { }
+
+.radio-label {
+  color: #2c3e50;
+}
+
+.table {
+  width: 100%;
+  background: rgba(0, 0, 0, .1);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-areas: "description description description description description description"
+    ". . . . . .";
+  grid-template-rows: auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+  margin-bottom: 10px;
+}
+
+.table-description {
+  height: 3em;
+  grid-area: description;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-description > h6 {
+  font-size: 1.4em;
+}
+
+.item.title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.item.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.item.actions > img {
+  width: 20px;
+  height: auto;
+}
+
+.pagination {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination > span {
+  padding: 10px;
+}
+
+.icon-button {
+  background: transparent;
+  width: 20px;
+  height: auto;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.icon-button > .icon {
+  width: 20px;
+  height: auto;
+}
+
+.dialog.wrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+}
+
+.dialog.wrapper.active {
+  display: flex;
+}
+
+.dialog > .box {
+  padding: 10px;
+  background: #ecf0f1;
+  box-sizing: border-box;
+}
+
+.box-title {
+  margin: 0;
+  font-size: 1em;
+  border-bottom: 1px solid #2c3e50;
+  color: #2c3e50;
+  padding: 8px 0;
+}
+
+.box-message {
+  margin: 20px 0;
+  color: #2c3e50;
+}
+
+.box-action {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-action-button {
+  border: none;
+}
+
+.box-action-button + .box-action-button {
+  margin-left: 10px;
+}
+
+.box-action-button.action {
+  background: #2980b9;
+  color: #ecf0f1;
+}
+
+.box-action-button.close {
+  background: #bdc3c7;
+  color: #2c3e50;
+}
